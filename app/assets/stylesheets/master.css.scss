@@ -1,2 +1,19 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$font-stack: 'Inconsolata', monospace;
+$primary-color: #333;
+$secondary-color: #00dffc;
+
+.navbar {
+
+  font-family: $font-stack;
+  border-radius:0;
+  border-bottom:0;
+
+  .navbar-brand {
+    color: $secondary-color;
+    font-weight: 700;
+  }
+
+}
