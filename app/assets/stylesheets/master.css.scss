@@ -2,9 +2,10 @@
 @import "bootstrap";
 
 $font-stack: 'Inconsolata', monospace;
-$primary-color: #333;
+$primary-color: #000;
 $secondary-color: #00dffc;
 $tertiary-color: #f8f8f8;
+
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin:0;
@@ -12,6 +13,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   font-family: $font-stack;
+}
+
+.clear {
+  clear: both;
 }
 
 .navbar {
@@ -29,7 +34,6 @@ body {
 
 .hero {
 
-  /* background: $secondary-color; */
   height: 370px;
 
 
@@ -64,9 +68,10 @@ body {
 .features {
 
   @include make-sm-column(12);
-  background-color: $tertiary-color;
+  background-color: #fff;
   padding-top: 40px;
   padding-bottom:40px;
+  margin-bottom:10px;
 
 
   .features--box {
@@ -93,5 +98,32 @@ body {
 
   .features--card--description {
   }
+
+}
+
+.user-form {
+
+  @include make-sm-column(4);
+  @include make-sm-column-offset(4);
+  @include make-xs-column(10);
+  @include make-xs-column-offset(1);
+  background: $tertiary-color;
+  padding: 20px;
+  margin-top: 25px;
+
+  .user-form--button {
+    
+    font-size: 18px;
+    font-weight: 700;
+    background-color: $primary-color;
+    border-radius: 0;
+    padding: 13px;
+    border: 0;
+  }
+
+  .user-form--button:hover {
+          background-color: $secondary-color;
+        }
+
 
 }
