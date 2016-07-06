@@ -5,6 +5,10 @@ $font-stack: 'Inconsolata', monospace;
 $primary-color: #333;
 $secondary-color: #00dffc;
 
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin:0;
+}
+
 .navbar {
 
   font-family: $font-stack;
@@ -14,6 +18,39 @@ $secondary-color: #00dffc;
   .navbar-brand {
     color: $secondary-color;
     font-weight: 700;
+  }
+
+}
+
+.hero {
+
+  font-family: $font-stack;
+  /* background: $secondary-color; */
+  height: 370px;
+
+
+  .hero--box {
+        @include make-xs-column(6);
+        @include make-xs-column-offset(3);
+        text-align: center;
+
+        .hero--box--title {
+          font-size: 46px;
+          font-weight: 700;
+        }
+
+        .hero--box--button {
+          font-size: 18px;
+          font-weight: 700;
+          background-color: $secondary-color;
+          border-radius: 0;
+          padding: 13px;
+          border: 0;
+        }
+
+        .hero--box--button:hover {
+          background-color: $primary-color;
+        }
   }
 
 }
