@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   font-family: $font-stack;
+  background-color: #fff;
 }
 
 .clear {
@@ -23,10 +24,11 @@ body {
 
   border-radius:0;
   border-bottom:0;
+  background-color: #fff;
 
   .navbar-brand {
-    color: $secondary-color;
     font-weight: 700;
+    color: $secondary-color;
   }
 
 }
