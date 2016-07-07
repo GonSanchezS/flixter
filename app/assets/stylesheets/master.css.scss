@@ -13,18 +13,18 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 body {
   font-family: $font-stack;
-  background-color: #fff;
+  background-color: white;
 }
 
-.clear {
-  clear: both;
+.clr {
+  clear:both;
 }
 
 .navbar {
 
   border-radius:0;
   border-bottom:0;
-  background-color: #fff;
+  background-color: #white;
 
   .navbar-brand {
     font-weight: 700;
@@ -33,75 +33,6 @@ body {
 
 }
 
-
-.hero {
-
-  height: 370px;
-
-
-  .hero--box {
-        @include make-sm-column(6);
-        @include make-sm-column-offset(3);
-        @include make-xs-column(10);
-        @include make-xs-column-offset(1);
-        text-align: center;
-
-        .hero--box--title {
-          font-size: 46px;
-          font-weight: 700;
-        }
-
-        .hero--box--button {
-          font-size: 18px;
-          font-weight: 700;
-          background-color: $secondary-color;
-          border-radius: 0;
-          padding: 13px;
-          border: 0;
-        }
-
-        .hero--box--button:hover {
-          background-color: $primary-color;
-        }
-  }
-
-}
-
-.features {
-
-  @include make-sm-column(12);
-  background-color: #fff;
-  padding-top: 40px;
-  padding-bottom:40px;
-  margin-bottom:10px;
-
-
-  .features--box {
-
-    @include make-sm-column(10);
-    @include make-sm-column-offset(1);
-  }
-
-  .features--card {
-    @include make-sm-column(4);
-    text-align: center; 
-  }
-
-  .features--card--icon {
-    font-size: 40px;
-    margin-bottom: 20px;
-  }
-
-  .features--card--title {
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-
-  .features--card--description {
-  }
-
-}
 
 .user-form {
 
