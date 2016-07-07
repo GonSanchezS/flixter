@@ -16,6 +16,7 @@ body {
   background-color: white;
 }
 
+
 .clr {
   clear:both;
 }
@@ -44,6 +45,10 @@ body {
   padding: 20px;
   margin-top: 25px;
 
+  .user-form--title {
+    text-align: center;
+  }
+
   .user-form--button {
     
     font-size: 18px;
@@ -58,5 +63,23 @@ body {
           background-color: $secondary-color;
         }
 
+  a {
+    color: $secondary-color;
+  }
+
+  .form-control {
+  border: 0px;
+  border-radius: 0px;
+  height: 50px;
+  box-shadow: none;
 
 }
+
+.form-control:focus {
+  border: 1px solid $secondary-color;
+
+}
+
+
+}
+

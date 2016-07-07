@@ -1,23 +1,23 @@
 <div class="user-form">
 
-<h2>Log in</h2>
+<h1 class="user-form--title">Log in</h1>
     <br />
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
     <br />
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
   </div>
     <br />
   <div class="actions">
     <%= f.submit "Log in", class: "btn btn-primary user-form--button" %>
   </div>
 <% end %>
-
+<br />
 <%= render "devise/shared/links" %>
 
 </div>
