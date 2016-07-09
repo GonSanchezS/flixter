@@ -1,0 +1,41 @@
+@import 'master';
+
+.course-hero {
+  background-color: $secondary-color;
+  padding: 50px;
+  text-align: center;
+
+  .course-hero--title {
+    font-size: 50px;
+  }
+
+  .course-hero--count {
+    color: white;
+  }
+}
+
+.course-listing {
+
+  .course-listing--box {
+    @include make-md-column(6);
+    @include make-md-column-offset(3);
+    background: $tertiary-color;
+    padding: 25px;
+    margin-top: 30px;
+  }
+
+  .course-listing--link {
+    color: $secondary-color;
+    font-weight: 700;
+    vertical-align: bottom;
+    float: none;
+
+  }
+
+  .course-listing--link:hover {
+    color: $primary-color;
+    text-decoration: none;
+
+  }
+
+}

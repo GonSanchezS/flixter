@@ -1,0 +1,23 @@
+<div class="course-hero">
+  <h1 class="course-hero--title">Learn something today</h1>
+    <br />
+  <h4 class="course-hero--count"><i class="glyphicon glyphicon-blackboard black"></i> <%= @courses.count %> available courses</h4>
+
+</div>
+
+<div class="course-listing container">
+
+  <% @courses.each do |course| %>
+    <div class="course-listing--box">
+      <h2><%= course.title %></h2>
+      <%= course.description %>
+        <br />
+        <br />
+         <%= link_to '#', {:class => "course-listing--link"} do %>
+       <p><i class="glyphicon glyphicon-arrow-right"></i> View the full course </p>
+      <% end %>
+    </div> 
+  <% end %>
+
+</div>
+
