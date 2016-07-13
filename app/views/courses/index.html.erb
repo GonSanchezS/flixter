@@ -5,19 +5,33 @@
 
 </div>
 
-<div class="course-listing container">
+<div class="course-container">
 
-  <% @courses.each do |course| %>
-    <div class="course-listing--box">
-      <h2><%= course.title %></h2>
-      <%= course.description %>
-        <br />
-        <br />
-         <%= link_to '#', {:class => "course-listing--link"} do %>
-       <p><i class="glyphicon glyphicon-arrow-right"></i> View the full course </p>
-      <% end %>
-    </div> 
-  <% end %>
+  <div class="course-listing ">
 
-</div>
+    <% @courses.each do |course| %>
+      <div class="course-listing--wrapper">
+      <div class="course-listing--box">
+        <div class="course-listing--titlebox">
+          <h2>
+            <%= link_to course.title, course_path(course), :class => "course-listing--title" %>
+          </h2>
+          <br />
+          <p><%= course.description %></p>
+        </div>
+
+        <div>
+            <%= link_to course_path(course), {:class => "course-listing--link"} do %>
+            <p><i class="glyphicon glyphicon-arrow-right"></i> View the full course </p>
+         </div>
+        </div>
+        <% end %>
+      </div> 
+
+    <% end %>
+    </div>
+
+  </div>
+  </div>
+
 

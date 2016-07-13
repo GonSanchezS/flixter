@@ -1,4 +1,14 @@
-  <br />
-<div>
-  <h1><%= @course.title %></h1>
-</div>
+<div class="course-hero">
+  <h1 class="course-hero--title"><%= @course.title %></h1>
+    <br />
+  <h4 class="course-hero--count"><%= @course.description %></h4>
+    <br />
+  <h5 class="course-hero--price"><%= number_to_currency @course.cost %></h5>
+    <% if current_user && current_user == @course.user %>
+      <br />
+      <br />
+      <%= link_to instructor_course_path(@course), {:class => "course-hero--administrate"} do %>
+        <p><i class="glyphicon glyphicon-cog"></i> Course settings</p>
+      <% end %>
+    <% end %>
+  </div>

@@ -22,7 +22,6 @@ body {
 }
 
 .navbar {
-
   border-radius:0;
   border-bottom:0;
   background-color: #white;
@@ -56,11 +55,11 @@ body {
     border-radius: 0;
     padding: 13px;
     border: 0;
-  }
 
-  .user-form--button:hover {
-          background-color: $secondary-color;
-        }
+      &:hover {
+        background-color: $secondary-color;
+      }
+  }
 
   a {
     color: $secondary-color;
@@ -72,10 +71,9 @@ body {
   height: 50px;
   box-shadow: none;
 
-  }
-
-  .form-control:focus {
-  border: 1px solid $secondary-color;
+    &:focus {
+      border: 1px solid $secondary-color;
+    }
 
   }
 
