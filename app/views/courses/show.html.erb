@@ -11,4 +11,12 @@
         <p><i class="glyphicon glyphicon-cog"></i> Course settings</p>
       <% end %>
     <% end %>
+    <%= link_to new_instructor_course_section_path(@course), {:class => "course-hero--create"} do %>
+      <p><i class="glyphicon glyphicon-plus"></i> Add a new section</p>
+    <% end %>
+          <%= link_to course_path(@course), {:class => "course-hero--administrate"} do %>
+        <p><i class="glyphicon glyphicon-education"></i> Preview as student</p>
+      <% end %>
   </div>
+
+
