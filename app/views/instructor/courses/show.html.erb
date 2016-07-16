@@ -22,14 +22,22 @@
         <p><i class="glyphicon glyphicon-education"></i> Preview as student</p>
       <% end %>
 
-  </div>
+</div>
+  <br />
 
-<div class="course-sections">
-    <ul>
-      <% @course.sections.each do |section| %>
-        <li>
-          <%= section.title %>
-        </li>
+<div class="course-section">
+  <% @course.sections.reverse.each do |section| %>
+    <h4><%= section.title %></h4>
+    <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: "course-section--create" %>
+      <br />
+      <% section.lessons.each do |lesson| %>
+        <div class="course-section--lesson">
+          <b><%= lesson.title %></b>
+          -
+          <%= lesson.subtitle %>
+        </div>
       <% end %>
-    </ul>  
+        <br />
+        <br />
+  <% end %>
 </div>

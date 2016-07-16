@@ -1,0 +1,13 @@
+  <br />
+<div class="user-form">
+  <h1 class="user-form--title">Add a new lesson</h1>
+      <br />
+   <%= simple_form_for @lesson, url: instructor_section_lessons_path(@section) do |f| %>
+    <%= f.input :title %>
+        <br />
+    <%= f.input :subtitle %>
+    <br />
+    <%= f.submit "Add lesson", class: 'btn btn-primary user-form--button' %>
+    <br />
+  <% end %>
+</div>
