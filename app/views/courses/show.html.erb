@@ -11,7 +11,6 @@
         <p><i class="glyphicon glyphicon-cog"></i> Course settings</p>
       <% end %>
 
-
   <!--  
     <%= link_to new_instructor_course_section_path(@course), {:class => "course-hero--create"} do %>
       <p><i class="glyphicon glyphicon-plus"></i> Add a new section</p>
@@ -21,7 +20,25 @@
       <% end %>
 
       -->
-  </div>
+</div>
 
+<div class="course-section">
+  <% @course.sections.reverse.each do |section| %>
+    <h4><%= section.title %></h4>
+    <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: "course-section--create" %>
+      <br />
+      <% section.lessons.each do |lesson| %>
+        <%= link_to lesson_path(lesson) do %>
+          <div class="course-section--lesson">
+            <b><%= lesson.title %></b>
+            -
+            <%= lesson.subtitle %>
+          </div>
+         <% end %> 
+      <% end %>
+        <br />
+        <br />
+  <% end %>
+</div>
 
 
