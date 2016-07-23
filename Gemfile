@@ -40,6 +40,15 @@ gem 'devise'
 # Install Simple Form
 gem 'simple_form'
 
+# Install Carrier Wave
+gem 'carrierwave'
+
+# Install Figaro
+gem 'figaro'
+
+# Install Fog
+gem 'fog'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
