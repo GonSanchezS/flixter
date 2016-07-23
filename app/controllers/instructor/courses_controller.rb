@@ -30,7 +30,7 @@ class Instructor::CoursesController < ApplicationController
     @current_course ||= Course.find(params[:id])
   end
 
-  def create_params
+  def course_params
     params.require(:course).permit(:title, :description, :cost, :image)
   end
 
