@@ -52,6 +52,9 @@ gem 'fog'
 # Install mini magick
 gem 'mini_magick', '~> 4.3.1'
 
+# Install carrierwave-aws
+gem 'carrierwave-aws'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
