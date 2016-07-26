@@ -17,13 +17,12 @@ $footer-height: 20px;
   }
 
   .course-hero--price {
-    background-color: #dfdfdf;
     display: inline-block;
     padding: 8px;
     border-radius: 5px;
     margin:auto;
     font-weight: 700;
-    color: #808080;
+    color: white;
   }
 
   .course-hero--administrate {
@@ -48,6 +47,31 @@ $footer-height: 20px;
     }
 
   }
+
+  .course-hero--button {
+    font-size: 18px;
+    font-weight: 700;
+    background-color: black;
+    border-radius: 0;
+    padding: 13px;
+    border: 0;
+
+    &:hover {
+      background-color: white;
+      color: $secondary-color;
+    }
+  }
+
+  .course-hero--enrolled {
+  background-color: #d5d5d5;
+    display: inline-block;
+    padding: 8px;
+    border-radius: 5px;
+    margin:auto;
+    font-weight: 700;
+    color: white;  
+  }
+
 }
 
 .course-listing {
