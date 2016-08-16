@@ -37,23 +37,25 @@
       -->
 </div>
 
-<div class="course-section">
+<ul class="course-section">
   <% @course.sections.rank(:row_order).each do |section| %>
+  <li class="items">
     <h4><%= section.title %></h4>
     <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: "course-section--create" %>
-      <br />
-      <% section.lessons.rank(:row_order).each do |lesson| %>
-        <%= link_to lesson_path(lesson) do %>
-          <div class="course-section--lesson">
-            <b><%= lesson.title %></b>
-            -
-            <%= lesson.subtitle %>
-          </div>
-         <% end %> 
-      <% end %>
-        <br />
-        <br />
+      
+    <% section.lessons.rank(:row_order).each do |lesson| %>
+      <%= link_to lesson_path(lesson) do %>
+        <div class="course-section--lesson">
+          <b><%= lesson.title %></b>
+          -
+          <%= lesson.subtitle %>
+        </div>
+      <% end %> 
+    <% end %>
+      </li>
+
   <% end %>
-</div>
+
+</ul>
 
 

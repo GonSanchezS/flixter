@@ -120,6 +120,13 @@ $footer-height: 20px;
 
   @include make-md-column(6);
   @include make-md-column-offset(3);
+  list-style: none;
+  list-style-position: outside;
+
+  .items {
+    margin-bottom: 20px;
+  }
+  
 
   h4 {
     font-weight: 700;

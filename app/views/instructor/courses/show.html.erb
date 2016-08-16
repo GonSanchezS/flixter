@@ -1,6 +1,7 @@
 <script>
 
 $(function() {
+
   $('.lessons').sortable({
     update: function(event, ui) {
       $.ajax({
@@ -14,6 +15,14 @@ $(function() {
       // $.get('update-sort.cfm', {lessonOrder:lessonOrder});
     }
   });
+
+  $('.course-section').sortable({
+    update: function (event, ui){
+      alert("Update URL: " + ui.item.data("update-url") + " and the Index is: " + ui.item.index());
+    }
+  });
+
+
 });
 
 </script>
@@ -48,13 +57,11 @@ $(function() {
 
   <br />
 
-<div class="course-section">
+<ul class="course-section">
   <% current_course.sections.rank(:row_order).each do |section| %>
-
+  <li class="items" data-update-url=<%= instructor_course_section_path(section) %>>
     <h4><%= section.title %></h4>
     <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: "course-section--create" %>
-      <br />
-
       <ul class="lessons">
         <% section.lessons.rank(:row_order).each do |lesson| %>
           <li class="course-section--lesson" data-update-url=<%= instructor_lesson_path(lesson) %>>
@@ -66,8 +73,8 @@ $(function() {
           </li>
         <% end %>
       </ul>
-
-        <br />
-        <br />
+    </li>    
   <% end %>
-</div>
+</ul>
+        <br />
+        <br />
