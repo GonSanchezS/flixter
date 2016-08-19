@@ -1,3 +1,30 @@
 <div class="course-hero">
   <h1>My dashboard</h1>
 </div>
+
+<h2 class="text-center">What I'm learning</h2>
+
+<ul class="course-section">
+<% current_user.enrolled_courses.each do |course| %>
+<li class="course-section--lesson">
+  <h3><%= link_to course.title, course_path(course) %></h3>
+  <p><% course.description %></p>
+  <%= link_to "More info...", course_path(course) %>
+</li>
+<% end %>
+</ul>
+
+ <hr class="col-xs-8 col-xs-offset-2">
+    <br class="clr" / >
+<h2 class="col-xs-12 text-center">What I'm teaching</h2>
+
+<ul class="course-section">
+<% current_user.courses.each do |course| %>
+<li class="course-section--lesson">
+  <h3><%= link_to course.title, course_path(course) %></h3>
+  <p><% course.description %></p>
+  <%= link_to "More info...", course_path(course) %>
+</li>
+<% end %>
+</ul>
+
