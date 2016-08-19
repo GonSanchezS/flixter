@@ -49,10 +49,10 @@ $(function() {
     <% end %>
 
     -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#NewSectionModal">
+  <i class="glyphicon glyphicon-plus"></i> Add a new section
+    </button>
 
-    <%= link_to new_instructor_course_section_path(current_course), {:class => "course-hero--create"} do %>
-      <p><i class="glyphicon glyphicon-plus"></i> Add a new section</p>
-    <% end %>
           <%= link_to course_path(current_course), {:class => "course-hero--administrate"} do %>
         <p><i class="glyphicon glyphicon-education"></i> Preview as student</p>
       <% end %>
@@ -84,3 +84,25 @@ $(function() {
 </ul>
         <br />
         <br />
+
+
+<!-- Modal -->
+<div class="modal fade" id="NewSectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="NewSectionModal">Add a new section</h4>
+      </div>
+      <%= simple_form_for @section, url: instructor_course_sections_path(current_course) do |f| %>
+        <div class="modal-body">
+            <%= f.input :title %>         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <%= f.submit "Add a section", class: 'btn btn-primary user-form--button' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

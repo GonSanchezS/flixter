@@ -37,9 +37,12 @@ $footer-height: 20px;
 
   }
 
-  .course-hero--create {
+  .btn-lg {
     color: white;
     float: left;
+    background: none;
+    border: none;
+    font-size: 14px;
 
     &:hover {
       color: black;
