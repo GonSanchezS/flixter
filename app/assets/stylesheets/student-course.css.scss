@@ -43,6 +43,7 @@ $footer-height: 20px;
     background: none;
     border: none;
     font-size: 14px;
+    padding: 0;
 
     &:hover {
       color: black;
@@ -169,11 +170,23 @@ $footer-height: 20px;
 
   }
 
-  .course-section--create {
+   .btn-lg {
     color: $secondary-color;
+    background: none;
+    border: none;
+    font-size: 14px;
+    padding: 0;
+
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
+
   }
 
 }
+
+
 
 
 
