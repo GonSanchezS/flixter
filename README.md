@@ -20,6 +20,6 @@ Deploying Flixter is super easy :rocket:
 3 - Create the database:
 ```rake db:create```
 
-### Thanks! :love:
+### Thanks! :heart_eyes:
 
 Thanks for checking it out! If you have some feedback, you can always find me at [@gonsanchezs](https://www.twitter.com/gonsanchezs).
