@@ -21,4 +21,14 @@
 
   <script src="http://vjs.zencdn.net/5.10.7/video.js"></script>
 
+  <br class="clr"/>
+  <br />
+
+  <% if current_lesson.next_lesson.present? %>
+    <%= link_to lesson_path(current_lesson.next_lesson), class: 'course-section--button' do %>
+    Next Lesson
+    <span class="glyphicon glyphicon-forward"></span>
+    <% end %> 
+  <% end %>  
+
   </div>
