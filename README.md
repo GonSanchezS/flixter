@@ -1,28 +1,25 @@
-== README
+# README
 
 Flixter is a Udemy clone, developed as practice for The Firehose Project. Flixter is hosted on Heroku, and can be accessed by clicking [here](http://flixter-gonsanchezs.heroku.com/). 
 
 A few things to consider:
-
 * Flixter runs on Ruby 2.0.0, and Rails 4.0.4
-
 * Database is postgresql
-
 * Image uploading and manipulation is handled by Carrierwave, and hosted in S3
 
-###Installation
+### Installation
 
-Deploying Flixter is super easy.
+Deploying Flixter is super easy :rocket:
 
 1 - Clone the repo:
-<tt>git clone https://github.com/GonSanchezS/flixter.git</tt>
+```git clone https://github.com/GonSanchezS/flixter.git```
 
 2 - Install it: 
-<tt>bundle install</tt>
+```bundle install```
 
 3 - Create the database:
-<tt>rake db:create</tt>
+```rake db:create```
 
-###Thanks!
+### Thanks! :love:
 
 Thanks for checking it out! If you have some feedback, you can always find me at [@gonsanchezs](https://www.twitter.com/gonsanchezs).
