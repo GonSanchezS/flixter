@@ -10,9 +10,9 @@ A few things to consider:
 
 * Image uploading and manipulation is handled by Carrierwave, and hosted in S3
 
-#### Installation
+###Installation
 
-Deploying Flixter is super easy:
+Deploying Flixter is super easy.
 
 1 - Clone the repo:
 <tt>git clone https://github.com/GonSanchezS/flixter.git</tt>
@@ -23,6 +23,6 @@ Deploying Flixter is super easy:
 3 - Create the database:
 <tt>rake db:create</tt>
 
-### Thanks!
+###Thanks!
 
 Thanks for checking it out! If you have some feedback, you can always find me at [@gonsanchezs](https://www.twitter.com/gonsanchezs).
